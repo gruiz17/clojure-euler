@@ -23,4 +23,5 @@
   (def sum (reduce + (filter three-five? (range 0 n))))
   (println sum))
 
-(euler-1-improved 1000)
+(defn main []
+  (euler-1-improved 1000))

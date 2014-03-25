@@ -26,4 +26,4 @@
   )
 )
 
-(println (last bigPalin))
+(defn main [] (println (last bigPalin)))

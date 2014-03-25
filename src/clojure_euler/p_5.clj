@@ -16,9 +16,10 @@
       (= (rem x 19) 0)
       (= (rem x 20) 0)) true false))
 
+(defn main []
 (println
   (first
     (seq
-      (filter everything-divisible? (range Integer/MAX_VALUE)))))
+      (filter everything-divisible? (range Integer/MAX_VALUE))))))
 
 ;; 232792560
