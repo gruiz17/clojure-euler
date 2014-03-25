@@ -4,7 +4,16 @@ Clojure solutions for Project Euler.
 
 ## Usage
 
-Just run it and see results.
+Start the REPL with
+```
+lein repl
+```
+I built a problem runner. Run it with
+```
+(require 'runner.runner)
+(runner/run [x])
+; with x being the problem number you want to run
+```
 
 ## License
 
