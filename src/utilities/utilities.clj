@@ -14,4 +14,4 @@
   )
 )
 
-(defn ! [n] (reduce * (range 2 (inc n))))
+(defn factorial [n] (reduce *' (range 2 (inc n))))
