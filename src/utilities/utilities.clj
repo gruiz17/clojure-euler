@@ -13,3 +13,5 @@
     )
   )
 )
+
+(defn ! [n] (reduce * (range 2 (inc n))))
