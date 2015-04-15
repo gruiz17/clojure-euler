@@ -4,24 +4,7 @@
 ; The sum of these multiples is 23.
 ; Find the sum of all the multiples of 3 or 5 below 1000.
 
-(defn euler-1 [n sum]
-  (if (= n 1000)
-    (println sum)
-
-  (if (or (zero? (rem n 3))
-      (zero? (rem n 5)))
-        (euler-1 (+ n 1) (+ sum n))
-      (euler-1 (+ n 1) sum))))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; reduce/filter version
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defn three-five? [n]
-  (if (or (zero? (rem n 3)) (zero? (rem n 5)))
-    true false))
-
-(defn euler-1-improved [n]
-  (def sum (reduce + (filter three-five? (range 0 n))))
-  (println sum))
-
-(defn main []
-  (euler-1-improved 1000))
+(defn euler-1 []
+  (->> (range 1 1000)
+       (filter #(or (zero? (mod % 3)) (zero? (mod % 5))))
+       (reduce +)))
